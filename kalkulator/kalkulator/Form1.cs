@@ -24,49 +24,11 @@ namespace kalkulator
             double firstArgument = Convert.ToDouble(textBox1.Text);
             double secondArgument = Convert.ToDouble(textBox2.Text);
 
-            double result;
-
-            switch (((Button)sender).Name)
-            {
-                case "button1": 
-                   result = firstArgument + secondArgument;
-                    break;
-                case "button2":
-                    result = firstArgument * secondArgument;
-                    break;
-                case "button3":
-                    result = firstArgument - secondArgument;
-                    break;
-                case "button4":
-                    result = firstArgument / secondArgument;
-                    break;
-                default :
-                    throw new Exception("Неизвестная операция");
-
-            }
-            
+            ICalculator calculator = Factory.CreateCalculator(((Button) sender).Name);
+            double result = calculator.Calculate(firstArgument, secondArgument);
             label2.Text = result.ToString();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-  
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
