@@ -1,4 +1,4 @@
-﻿namespace kalkulator
+﻿namespace kalkulator.TwoArgument
 {
     public class Umnog:ICalculator
     {

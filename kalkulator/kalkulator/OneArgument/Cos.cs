@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace kalkulator
+namespace kalkulator.OneArgument
 {
     public class Cos: IOneCalculator
     {

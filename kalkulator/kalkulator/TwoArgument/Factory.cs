@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace kalkulator
+namespace kalkulator.TwoArgument
 {
     public static class Factory
     {
@@ -10,16 +10,16 @@ namespace kalkulator
             {
                 case "button1":
                     return new Add();
-                    break;
                 case "button2":
                      return new Umnog();
-                    break;
                 case "button3":
                     return new Raznost();
-                    break;
                 case "button4":
                     return new Delen();
-                    break;
+                case "button9":
+                    return new Log();
+                case "button10":
+                    return new Mod();
                 default:
                     throw new Exception("Неизвестная операция");
 
