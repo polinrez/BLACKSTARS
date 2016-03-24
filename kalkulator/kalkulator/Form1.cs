@@ -29,6 +29,13 @@ namespace kalkulator
             label2.Text = result.ToString();
         }
 
-
+        private void OneClick(object sender, EventArgs e)
+        {
+            double firstArgument = Convert.ToDouble(textBox1.Text);
+       
+            IOneCalculator calculator = OneFactory.CreateCalculator(((Button)sender).Name);
+            double result = calculator.Calculate(firstArgument);
+            label2.Text = result.ToString();
+        }
     }
 }
