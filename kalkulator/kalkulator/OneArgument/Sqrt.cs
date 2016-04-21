@@ -6,6 +6,10 @@ namespace kalkulator.OneArgument
     {
         public double Calculate(double firstArgument)
         {
+            if (firstArgument < 0)
+            {
+                throw new Exception("Корень из отрицательного");
+            }
             return Math.Sqrt(firstArgument);
         }
     }

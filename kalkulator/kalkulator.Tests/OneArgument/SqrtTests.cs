@@ -1,4 +1,5 @@
-﻿using kalkulator.OneArgument;
+﻿using System;
+using kalkulator.OneArgument;
 using NUnit.Framework;
 
 namespace kalkulator.Tests.OneArgument
@@ -11,11 +12,18 @@ namespace kalkulator.Tests.OneArgument
         [TestCase(523, 22.8691)]
         [TestCase(6084, 78)]
         [TestCase(0, 0)]
-        public void AddTest(double first, double expected)
+        public void SqrtTest(double first, double expected)
         {
             Sqrt calculator = new Sqrt();
             double result = calculator.Calculate(first);
             Assert.AreEqual(expected, result, 0.0001);
+        }
+
+        [Test]
+        public void OtricTest()
+        {
+            Sqrt calculator = new Sqrt();
+            Assert.Throws<Exception>(() => calculator.Calculate(-10));
         }
     }
 }

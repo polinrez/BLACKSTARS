@@ -18,13 +18,10 @@ namespace kalkulator.Tests.OneArgument
         }
 
         [Test]
-
         public void ZeroTest()
         {
             Delen calculator = new Delen();
-           
             Assert.Throws<Exception>(() => calculator.Calculate(10, 0));
-
         }
     }
 }
