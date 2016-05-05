@@ -4,6 +4,11 @@ namespace kalkulator.TwoArgument
 {
     public static class Factory
     {
+        /// <summary>
+        /// Метод создания калькулятора для разных операций для двух аргументов
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static ICalculator CreateCalculator(string name)
         {
             switch (name)

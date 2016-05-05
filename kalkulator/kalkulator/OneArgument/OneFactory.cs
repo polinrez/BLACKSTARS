@@ -4,6 +4,10 @@ namespace kalkulator.OneArgument
 {
     public class OneFactory
     {
+    /// <summary>
+    /// Метод создания калькулятора для разных операций для одного аргумента
+    /// </summary>
+    /// <param name="name">Аргумент типа string</param>
         public static IOneCalculator CreateCalculator(string name)
         {
             switch (name)
