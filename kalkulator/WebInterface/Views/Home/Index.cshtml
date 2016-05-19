@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (@Html.BeginForm())
+{
+    @Html.DropDownList("operation", (List<SelectListItem>)ViewBag.operations)
+
+    <input type="number" name="first" value="0"/>
+    <input type="number" name="second" value="0"/>
+    
+    <input type="submit" value="Вычислить"/>
+}
